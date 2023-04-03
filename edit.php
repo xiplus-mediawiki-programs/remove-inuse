@@ -62,6 +62,7 @@ foreach ($pagelist as $page) {
 	$pages = current($res["query"]["pages"]);
 	$text = $pages["revisions"][0]["*"];
 	$basetimestamp = $pages["revisions"][0]["timestamp"];
+	$summary = $cfg['summary'];
 
 	if (preg_match($cfg["underconstruction_regex"], $text)) {
 		$text = preg_replace($cfg["underconstruction_regex"], "", $text);
