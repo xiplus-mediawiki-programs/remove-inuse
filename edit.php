@@ -79,6 +79,8 @@ foreach ($pagelist as $page) {
 
 	if ($pages["revisions"][0]["*"] !== $text) {
 		$logpage[] = $page["title"];
+	} else {
+		continue;
 	}
 
 	$post = array(
